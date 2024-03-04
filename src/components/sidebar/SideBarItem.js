@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
+import { Link } from "react-router-dom";
 import  styles from "./SideBar.module.css";
+
 
 const SideBarItem = (props) => {
     const [isOpen,setIsOpen] = useState(false);
@@ -30,9 +32,10 @@ const SideBarItem = (props) => {
 
         }}
         >
-            <a class="active" href="#home">
+            <Link to={props.path}>{props.title}</Link>        
+            {/* <a class="active" href="#home">
               {props.title}
-            </a>
+            </a> */}
           </li>
     </>
   )
